@@ -1,0 +1,9 @@
+Create MQTT Broker flow
+Confiure Mosca MQTT Broker Node
+MQTT Port: 1883
+MQTT WS port: 8080
+Username: *****
+Password: *****
+
+Crate MSG payload
+LInk MQTT  Broker output text to debug tab
