@@ -1,0 +1,29 @@
+/Arduino Sesor code
+#include <dht.h>
+
+dht DHT;
+
+#define DHT11_PIN 7
+#define Alert_PIN 6
+
+void setup(){
+  Serial.begin(9600);
+  pinMode(Alert_PIN, OUTPUT);
+}
+
+void loop()
+{
+  int chk = DHT.read11(DHT11_PIN);
+  Serial.print("Temperature = ");
+  Serial.println(DHT.temperature  * 1.8+32);
+  Serial.print("Humidity = ");
+  Serial.println(DHT.humidity);
+  delay(1000);
+if (DHT.temperature * 1.8+32 > 80){
+   digitalWrite(Alert_PIN, HIGH);
+  }
+else if (DHT.temperature * 1.8+32 < 80){
+   digitalWrite(Alert_PIN, LOW);
+}
+}
+
