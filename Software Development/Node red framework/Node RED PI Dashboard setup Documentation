@@ -59,28 +59,7 @@ Exec Node LOAD #AVG CPU LOAD
                         Name:
     
     
-Exec Node MEM #current system memory
-     commnad: free | grep Mem | awk '{print 100*($4+$6+$7)/$2}'
-     
-                
-                    Dashboard Gage Node
-                        Group: Memory [Home]
-                        Size: AUTO
-                        Type: Level
-                        Label: Free Memory
-                        Units: %
-                        Range: min: 0 Max: 100
-                        Name: Free Memory
-                        
-                    Dashboard Graph Node
-                        Group: Memory [Home]
-                        Size: AUTO
-                        Label: Memory
-                        Type: Line Chart
-                        X-axis: Minutes 15
-                        X-axis: min:   Max:
-                        Name:    
-     
+
     
 Exec Node Temp #current system disk usage
      commnad: df -h
