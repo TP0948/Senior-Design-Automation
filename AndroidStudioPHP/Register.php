@@ -1,11 +1,10 @@
 <?php
-    $con = mysqli_connect("my_host", "my_user", "my_password", "my_db");
+    $con = mysqli_connect("localhost", "id4358033_admin", "Poop123poop", "id4358033_homeautomation");
     
-    $name = $_POST["name"];
-    $username = $_POST["username"];
+    $email = $_POST["email"];
     $password = $_POST["password"];
-    $statement = mysqli_prepare($con, "INSERT INTO user (name, username, password) VALUES (?, ?, ?)");
-    mysqli_stmt_bind_param($statement, "siss", $name, $username, $password);
+    $statement = mysqli_prepare($con, "INSERT INTO user (email, password) VALUES (?, ?)");
+    mysqli_stmt_bind_param($statement, "siss", $email, $password);
     mysqli_stmt_execute($statement);
     
     $response = array();
