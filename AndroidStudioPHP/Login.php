@@ -1,5 +1,5 @@
 <?php
-    $con = mysqli_connect("localhost", "id4358033_admin", "Poop123poop", "id4358033_homeautomation");
+    $con = mysqli_connect("localhost", "root", "", "user");
     
     $email = $_POST["email"];
     $password = $_POST["password"];
