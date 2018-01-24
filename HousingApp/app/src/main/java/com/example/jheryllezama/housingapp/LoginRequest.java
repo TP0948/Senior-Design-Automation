@@ -12,8 +12,8 @@ import java.util.Map;
 
 public class LoginRequest extends StringRequest {
 
-    //Creates the link to the register.php file on MySQL Server
-    private static final String LOGIN_REQUEST_URL = "https://www.000webhost.com/members/website/senior-design-automation/database/Login.php";
+    //Creates the link to the login.php file on MySQL Server
+    private static final String LOGIN_REQUEST_URL = "http://localhost/AndroidApp/Login.php";
     private Map<String, String> params;
 
     //Passes the variables through volley

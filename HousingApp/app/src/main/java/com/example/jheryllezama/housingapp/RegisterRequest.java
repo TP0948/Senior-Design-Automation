@@ -13,7 +13,7 @@ import java.util.Map;
 public class RegisterRequest extends StringRequest {
 
     //Creates the link to the register.php file on MySQL Server
-    private static final String REGISTER_REQUEST_URL = "https://www.000webhost.com/members/website/senior-design-automation/database/Register.php";
+    private static final String REGISTER_REQUEST_URL = "http://localhost/AndroidApp/Register.php";
     private Map<String, String> params;
 
     //Passes the variables through volley
