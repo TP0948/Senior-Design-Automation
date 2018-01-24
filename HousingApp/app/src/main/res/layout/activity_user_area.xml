@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jheryllezama.housingapp.UserAreaActivity">
+
+    <TextView
+        android:id="@+id/tvWelcomeMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/boption2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvlocation"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="54321 Oakland Ave"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/battic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/boption1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="8dp"
+        android:text="Option 1"
+        app:layout_constraintBottom_toTopOf="@+id/tvlocation"
+        app:layout_constraintEnd_toStartOf="@+id/boption2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/boption2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="option 2"
+        app:layout_constraintBottom_toTopOf="@+id/tvlocation"
+        app:layout_constraintEnd_toStartOf="@+id/boption3"
+        app:layout_constraintStart_toEndOf="@+id/boption1" />
+
+    <Button
+        android:id="@+id/boption3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="option 3"
+        app:layout_constraintBottom_toTopOf="@+id/tvlocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/boption2" />
+
+    <Button
+        android:id="@+id/battic"
+        android:layout_width="330dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Attic"
+        app:layout_constraintBottom_toTopOf="@+id/broom3a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/broom3a"
+        android:layout_width="330dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Room 3-A"
+        app:layout_constraintBottom_toTopOf="@+id/bunit2a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bunit2a"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="8dp"
+        android:text="Unit 2-A"
+        app:layout_constraintBottom_toTopOf="@+id/bunit1a"
+        app:layout_constraintEnd_toStartOf="@+id/bunit2b"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bunit1a"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="8dp"
+        android:text="unit 1-a"
+        app:layout_constraintBottom_toTopOf="@+id/blogout"
+        app:layout_constraintEnd_toStartOf="@+id/bunit1b"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bunit2b"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="Unit 2-b"
+        app:layout_constraintBottom_toTopOf="@+id/bunit1b"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bunit2a" />
+
+    <Button
+        android:id="@+id/bunit1b"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="unit 1-b"
+        app:layout_constraintBottom_toTopOf="@+id/blogout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bunit1a" />
+
+    <Button
+        android:id="@+id/blogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
