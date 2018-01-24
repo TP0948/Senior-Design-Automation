@@ -18,7 +18,7 @@ public class UserAreaActivity extends AppCompatActivity {
         String email = intent.getStringExtra("email");
 
         //Displays the email to the UserAreaActivity
-        String message = "You are currently signed in as " + email;
+        String message = "Welcome! You are currently signed in as " + email;
         WelcomeMsg.setText(message);
     }
 }

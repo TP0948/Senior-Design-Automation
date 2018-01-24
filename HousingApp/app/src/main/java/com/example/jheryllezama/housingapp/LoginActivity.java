@@ -80,5 +80,16 @@ public class LoginActivity extends AppCompatActivity {
                 queue.add(loginRequest);
             }
         });
+
+        //Test Code for linking main (delete)
+        Button mainActivityBtn = (Button)findViewById(R.id.bmain);
+        mainActivityBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), UserAreaActivity.class);
+                startActivity(startIntent);
+            }
+        });
+
     }
 }
