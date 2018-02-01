@@ -1,0 +1,29 @@
++++++++++ Initial Pi Setup +++++++++
+
+1. Setting up localisation settings.
+	a. Change the Pi localization settings to meet your reqirements
+		Start>preferences>Raspberry Pi Configuration>Localisation
+		reboot when finished
+	
+2. Update the Pi untill the system is at the lastest version
+	reboot when finished
+
+
+
+3. Set permissions for SUP# files to allow execute by anyone
+
+4.Run SUP1.sh as sudo from the terminal
+
+5.run 'update-nodejs-and-nodered' command twice without sudo.
+
+6. run 'sudo systemctl enable nodered.service' then reboot the machine.
+
+7. run SUP2.sh without root permissions from the terminal to install node red packages that are most commonly used.
+
+8.
+
+
+4. Run the 'SUP#' files in order from 1-2 to complete the setup of node red. **Addtional node addons may be necissary further on the be compatable with the building deployemnt needs.
+
+	a. SUP1 needs sudo
+	b. SUP2 run as not sudo
