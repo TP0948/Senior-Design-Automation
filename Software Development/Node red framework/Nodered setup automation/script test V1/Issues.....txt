@@ -1,0 +1,3 @@
+Nodered config file not deploying properly
+Package installation installing as root rather than pi so it will not show up when rebooted 
+
