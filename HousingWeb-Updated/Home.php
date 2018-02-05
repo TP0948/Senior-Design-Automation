@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Your Home Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="MAINCSS.css">
+ 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->    
+    
+    
+    
+    
+    
   <style>
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 550px}
@@ -47,12 +71,17 @@
     background-color: #3e8e41;
 }
 
+      .pIMG {
+          max-width:100%;
+    max-height:100%;
+      }
+      
   </style>
 </head>
 <body>
 
    
-        <!-- Navigation -->
+     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="index.html">Housing automation</a>
@@ -75,6 +104,7 @@
 
 
 
+
 <nav class="navbar navbar-inverse visible-xs">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -83,7 +113,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
+      
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -121,7 +151,7 @@
       <div class="row">
         <div class="col-sm-4">
           <div class="well">
-            <img src="http://localhost/HousingWeb-Updated/images/GraceCenter.jpg" height="200" width="400"> 
+            <img class="pIMG" src="http://localhost/HousingWeb-Updated/images/GraceCenter.jpg"> 
             <p>Grace Center Low Income Housing</p> 
 			 <div class="btn-group">
 				<button>Manage</button>
@@ -132,16 +162,24 @@
         </div>
         <div class="col-sm-4">
           <div class="well">
-            <p>Text</p> 
-            <p>Text</p> 
-            <p>Text</p> 
+            <img class="pIMG" src="http://localhost/HousingWeb-Updated/images/Oakland.jpg"> 
+            <p>Oakland University</p> 
+			 <div class="btn-group">
+				<button>Manage</button>
+				<button>Analytics</button>
+				<button>Settings</button>
+			</div> 
           </div>
         </div>
         <div class="col-sm-4">
           <div class="well">
-            <p>Text</p> 
-            <p>Text</p> 
-            <p>Text</p> 
+           <img class="pIMG" src="http://localhost/HousingWeb-Updated/images/Mcdonalds.jpg"> 
+            <p>Mcdonalds</p> 
+			 <div class="btn-group">
+				<button>Manage</button>
+				<button>Analytics</button>
+				<button>Settings</button>
+			</div>  
           </div>
         </div>
       </div>
