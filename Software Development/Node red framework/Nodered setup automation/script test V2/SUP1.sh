@@ -247,12 +247,12 @@ update-nodejs-and-nodered
 
 sudo systemctl enable nodered.service 
 
-Npm install Node-red-contrib-bigtimer 
-Npm install Node-red-dashboard 
-Npm install Node-red-contrib-mqtt-broker  
-Npm install Node-red-contrib-camerapi 
-Npm install Node-red-contrib-usbcamera 
-Npm install Node-red-node-mysql	
+npm install Node-red-contrib-bigtimer 
+npm install Node-red-dashboard 
+npm install Node-red-contrib-mqtt-broker  
+npm install Node-red-contrib-camerapi 
+npm install Node-red-contrib-usbcamera 
+npm install Node-red-node-mysql	
 
 
 
