@@ -46,10 +46,8 @@
       </div>
     </nav>
 
-
-
-
-<div class="container">
+    
+    <div class="container">
     <h1>Temperature Information</h1>
         <div class="row">
             <div class="col-md-6">
@@ -57,12 +55,16 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Building</th>
-                                <th>Location</th>
-                                <th>Sensor</th>
-                                <th>Date</th>
-                              
+                                <th>CID</th>
+                                <th>FID</th>
+                                <th>Insurance ID</th>
+                                <th>Discount ID</th>
+                                <th>Ticket ID</th>
+                                <th>Cost</th>
+                                <th>Class</th>
+                                <th>Type</th>
+                                <th>Seat No.</th>
+                                <th>Departure Time</th>
                                 
                             </tr>
                         </thead>
@@ -74,7 +76,7 @@
                             $servername = "localhost";
                             $username = "root";
                             $password = "";
-                            $dbname = "";
+                            $dbname = "Temp";
                             
                             
 
@@ -84,7 +86,7 @@
                                 die("Connection failed: " . $conn->connect_error);
                             }
 
-                            $sql = "SELECT * FROM Ticket WHERE TicketID = '$TicketID'";
+                            $sql = "SELECT * FROM Temp WHERE Location = '$TicketID'";
 
                             $result = $conn->query($sql);
 
@@ -111,12 +113,19 @@
                 </div>
                 </div>
                 
-               
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-        
-        </body>
-        </html>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
 
 </body>
 </html>
