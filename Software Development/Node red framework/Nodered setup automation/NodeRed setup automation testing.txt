@@ -1,5 +1,0 @@
-After each script test, the server must be rebuilt from scratch including the reformat of the complete operating system.
-The system was then re-updated to the latest version then the test script was ran.
-
-This way of testing provided the most complete and accurate method for testing the scripts however was very time consuming. 
- 
