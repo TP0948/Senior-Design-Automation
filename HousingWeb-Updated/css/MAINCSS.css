@@ -1,7 +1,7 @@
  /* The sidebar menu */
 .sidenav {
     height: 100%;
-    width: 160px; /* Set the width of the sidebar */
+    width: 130px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 50px; /* Stay at the top */
@@ -38,6 +38,13 @@
 } 
 
 
+
+/*__________________Property images______________________*/
+
+.pIMG{
+    max-width:100%;
+    max-height:100%;
+}
 
 
 

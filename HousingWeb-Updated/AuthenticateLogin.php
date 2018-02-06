@@ -9,7 +9,7 @@
     {
         echo '"Success " , "<br>"';
         $_SESSION['login'] = $username;
-        header("Location: /HousingWeb-Updated/Home.php");
+        header("Location: /HousingWeb-Updated/Home2.php");
         var_dump($_SESSION['login']);
     }
     else
