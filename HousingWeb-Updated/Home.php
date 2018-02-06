@@ -75,15 +75,25 @@
           max-width:100%;
     max-height:100%;
       }
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> 4b147a156449e50ccfeb9ccc13002a59a3f66a02
   </style>
 </head>
 <body>
 
+<<<<<<< HEAD
 
 <div>   
      <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top2">
+=======
+   
+     <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+>>>>>>> 4b147a156449e50ccfeb9ccc13002a59a3f66a02
       <div class="container">
         <a class="navbar-brand" href="index.html">Housing automation</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -107,6 +117,30 @@
 
 <div>
 
+<<<<<<< HEAD
+=======
+
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li><a href="#">Age</a></li>
+        <li><a href="#">Gender</a></li>
+        <li><a href="#">Geo</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+>>>>>>> 4b147a156449e50ccfeb9ccc13002a59a3f66a02
 
 
 
