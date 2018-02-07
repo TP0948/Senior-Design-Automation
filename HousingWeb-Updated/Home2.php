@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
 	
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 <!--===============================================================================================-->
@@ -85,6 +87,34 @@ p {
 
   </style>
 
+
+
+<!--<script>
+$(function() {
+    $('#addProperty').on('click', function() {
+        var $well = $('.well');
+        $("#well").append('<div id="id' + ($well.length + 1) + '" class="well">Some Stuff Here</div>');
+
+    });
+});
+</script> -->
+  
+  
+  
+  
+  
+  <!--<script>
+$(document).ready(function(){
+    $("#addProperty").click(function(){
+        $(".row").prepend(" <div class="well"><img class="pIMG" src=http://localhost/HousingWeb-Updated/images/GraceCenter.jpg> <p>Grace Center Low Income Housing</p><div class="btn-group"><button onclick="location.href = 'http://localhost/HousingWeb-Updated/Manage.php';" id="Manage"  >Manage</button><button onclick="location.href = 'http://localhost/HousingWeb-Updated/Analytics.php';" id="Manage"  >Analytics</button><button onclick="location.href = 'http://localhost/HousingWeb-Updated/Settings.php';" id="Manage"  >Settings</button></div> </div>.");
+    });
+
+    
+});
+</script>
+
+
+
   
   
 <script>
@@ -104,7 +134,7 @@ function addElement () {
 }
 </script>
 </head>
-<body>
+<body> -->
 
 
 
@@ -140,6 +170,7 @@ function addElement () {
       <div class="row">
         <div class="col-sm-4">
           <div class="well">
+		   <div class="prop1">
 		  
             <img class="pIMG" src="http://localhost/HousingWeb-Updated/images/GraceCenter.jpg"> 
             <p>Grace Center Low Income Housing</p> 
@@ -150,6 +181,7 @@ function addElement () {
 			</div> 
           </div>
         </div>
+		</div>
         <div class="col-sm-4">
            <div class="well">
             <img class="pIMG" src="http://localhost/HousingWeb-Updated/images/Oakland.jpg"> 
@@ -164,7 +196,7 @@ function addElement () {
         <div class="col-sm-4">
            <div class="well">
            <img class="pIMG" src="http://localhost/HousingWeb-Updated/images/Mcdonalds.jpg"> 
-            <p>Mcdonalds</p> 
+           <p>Mcdonalds</p> 
 			 <div class="btn-group">
 				<button onclick="location.href = 'http://localhost/HousingWeb-Updated/Manage.php';" id="Manage"  >Manage</button>
 				<button onclick="location.href = 'http://localhost/HousingWeb-Updated/Analytics.php';" id="Manage"  >Analytics</button>
@@ -176,8 +208,12 @@ function addElement () {
 	  <div class="row">
         <div class="col-sm-4">
           <div class="well">
-		  <a href="http://localhost/HousingWeb-Updated/Main Tabs/NewProperty.php">
-            <img class="pIMG" src="http://localhost/HousingWeb-Updated/images/Plus.png" height="391px" Width="335.183px"> 
+		  
+		  
+		  
+		  
+		  <a href="http://localhost/HousingWeb-Updated/NewProperty.php">
+            <img class="pIMG" src="http://localhost/HousingWeb-Updated/images/Plus.png" id="addProperty" height="391px" Width="335.183px"> 
             </a>
           </div>
         </div>

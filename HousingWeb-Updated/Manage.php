@@ -22,8 +22,35 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+
+<style>
+.column {
+	
+}
+.top {
+	padding-top:50px;
+	text-align:center;
+}
+.label{
+	padding:20px;
+}
+.label{
+	text-align:center;
+}
+.center {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+	padding-top: 100px;
+    
+}
+</style>
 </head>
 <body>
+
+
+
     
         <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -47,36 +74,42 @@
     </nav>
 
     
-    <div class="container">
-    <h1>Temperature Information</h1>
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Details</h2>
+	
+	<div class="row">
+	<img class="center" src="http://localhost/HousingWeb-Updated/images/GraceCenter.jpg">
+	</div>
+	
+	
+	<div class="top">
+	<h1 style="text-decoration:underline;">Temperature information</h1>
+	</div>
+	
+	
+	
+    
+    <div class="row">
+        
+            <div class="col-sm-6">
+                <h2 class="label" >Hallway</h2>
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>CID</th>
-                                <th>FID</th>
-                                <th>Insurance ID</th>
-                                <th>Discount ID</th>
-                                <th>Ticket ID</th>
-                                <th>Cost</th>
-                                <th>Class</th>
-                                <th>Type</th>
-                                <th>Seat No.</th>
-                                <th>Departure Time</th>
-                                
+                                <th>ID</th>
+                                <th>Location</th>
+                                <th>Sensor</th>
+                                <th>Value</th>
+                               
                             </tr>
                         </thead>
                         <tbody>
-                            <?php include "HTMLDatabaseFunctions.php";
+                            <?php 
                             
-                            session_start(); 
+                            session_start();
 
                             $servername = "localhost";
                             $username = "root";
                             $password = "";
-                            $dbname = "Temp";
+                            $dbname = "temp";
                             
                             
 
@@ -86,18 +119,74 @@
                                 die("Connection failed: " . $conn->connect_error);
                             }
 
-                            $sql = "SELECT * FROM Temp WHERE Location = '$TicketID'";
+                            $sql = "SELECT * FROM temp WHERE Location = 'Hallway';";
 
                             $result = $conn->query($sql);
 
                             if ($result->num_rows > 0) {
                                 while($row = $result->fetch_assoc()) {
                                     print   "<tr>";
-                                    print   "<td>" . $row["CID"] . "</td>" . "<td>" . $row["FID"] . "</td>" . 
-                                            "<td>" . $row["InsuranceID"] . "</td>" . "<td>" . $row["DiscountID"] . "</td>" . 
-                                            "<td>" . $row["TicketID"] . "</td>" .  "<td>" . $row["Cost"] . "</td>" .
-                                             "<td>" . $row["Class"] . "</td>".  "<td>" . $row["Type"] . "</td>" . 
-                                             "<td>" . $row["SeatNo"] . "</td>" . "<td>" . $row["DepartureTime"] . "</td>" . "<td>";
+                                    print   "<td>" . $row["ID"] . "</td>" . "<td>" . $row["Location"] . "</td>" . 
+                                            "<td>" . $row["Sensor"] . "</td>" . "<td>" . $row["Value"] . "</td>";
+                                    print    "</tr>";
+                                }
+                            }
+                            else {
+                                print   "<td> 0 Results </td><br>";
+                            }
+
+                            $conn->close();
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+                
+				
+				
+                
+	
+	
+       
+            <div class="col-sm-6">
+                <h2 class="label">Cafeteria</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Location</th>
+                                <th>Sensor</th>
+                                <th>Value</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
+                            
+							error_reporting(0);
+                            session_start();
+
+                            $servername = "localhost";
+                            $username = "root";
+                            $password = "";
+                            $dbname = "temp";
+                            
+                            
+
+                            $conn = new mysqli($servername, $username, $password, $dbname);
+
+                            if ($conn->connect_error) {
+                                die("Connection failed: " . $conn->connect_error);
+                            }
+
+                            $sql = "SELECT * FROM temp WHERE Location = 'Cafeteria';";
+
+                            $result = $conn->query($sql);
+
+                            if ($result->num_rows > 0) {
+                                while($row = $result->fetch_assoc()) {
+                                    print   "<tr>";
+                                    print   "<td>" . $row["ID"] . "</td>" . "<td>" . $row["Location"] . "</td>" . 
+                                            "<td>" . $row["Sensor"] . "</td>" . "<td>" . $row["Value"] . "</td>";
                                     print    "</tr>";
                                 }
                             }
@@ -111,10 +200,354 @@
                     </table>
                 </div>
                 </div>
+				<div class="row">
+        
+            <div class="col-sm-6">
+                <h2 class="label" >Lobby</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Location</th>
+                                <th>Sensor</th>
+                                <th>Value</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
+                            
+                            session_start();
+
+                            $servername = "localhost";
+                            $username = "root";
+                            $password = "";
+                            $dbname = "temp";
+                            
+                            
+
+                            $conn = new mysqli($servername, $username, $password, $dbname);
+
+                            if ($conn->connect_error) {
+                                die("Connection failed: " . $conn->connect_error);
+                            }
+
+                            $sql = "SELECT * FROM temp WHERE Location = 'Lobby';";
+
+                            $result = $conn->query($sql);
+
+                            if ($result->num_rows > 0) {
+                                while($row = $result->fetch_assoc()) {
+                                    print   "<tr>";
+                                    print   "<td>" . $row["ID"] . "</td>" . "<td>" . $row["Location"] . "</td>" . 
+                                            "<td>" . $row["Sensor"] . "</td>" . "<td>" . $row["Value"] . "</td>";
+                                    print    "</tr>";
+                                }
+                            }
+                            else {
+                                print   "<td> 0 Results </td><br>";
+                            }
+
+                            $conn->close();
+                            ?>
+                        </tbody>
+                    </table>
                 </div>
+                
+				
+				
                 
 	
 	
+       
+            <div class="col-sm-6">
+                <h2 class="label">Kitchen</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Location</th>
+                                <th>Sensor</th>
+                                <th>Value</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
+                            
+							error_reporting(0);
+                            session_start();
+
+                            $servername = "localhost";
+                            $username = "root";
+                            $password = "";
+                            $dbname = "temp";
+                            
+                            
+
+                            $conn = new mysqli($servername, $username, $password, $dbname);
+
+                            if ($conn->connect_error) {
+                                die("Connection failed: " . $conn->connect_error);
+                            }
+
+                            $sql = "SELECT * FROM temp WHERE Location = 'Kitchen';";
+
+                            $result = $conn->query($sql);
+
+                            if ($result->num_rows > 0) {
+                                while($row = $result->fetch_assoc()) {
+                                    print   "<tr>";
+                                    print   "<td>" . $row["ID"] . "</td>" . "<td>" . $row["Location"] . "</td>" . 
+                                            "<td>" . $row["Sensor"] . "</td>" . "<td>" . $row["Value"] . "</td>";
+                                    print    "</tr>";
+                                }
+                            }
+                            else {
+                                print   "<td> 0 Results </td><br>";
+                            }
+
+                            $conn->close();
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+   
+   
+   <div class="top">
+	<h1 style="text-decoration:underline;">Security</h1>
+	</div>
+	
+	
+	
+    
+    <div class="row">
+        
+            <div class="col-sm-6">
+                <h2 class="label" >Hallway</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Location</th>
+                                <th>Sensor</th>
+                                <th>Value</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
+                            
+                            session_start();
+
+                            $servername = "localhost";
+                            $username = "root";
+                            $password = "";
+                            $dbname = "temp";
+                            
+                            
+
+                            $conn = new mysqli($servername, $username, $password, $dbname);
+
+                            if ($conn->connect_error) {
+                                die("Connection failed: " . $conn->connect_error);
+                            }
+
+                            $sql = "SELECT * FROM temp WHERE Location = 'Hallway';";
+
+                            $result = $conn->query($sql);
+
+                            if ($result->num_rows > 0) {
+                                while($row = $result->fetch_assoc()) {
+                                    print   "<tr>";
+                                    print   "<td>" . $row["ID"] . "</td>" . "<td>" . $row["Location"] . "</td>" . 
+                                            "<td>" . $row["Sensor"] . "</td>" . "<td>" . $row["Value"] . "</td>";
+                                    print    "</tr>";
+                                }
+                            }
+                            else {
+                                print   "<td> 0 Results </td><br>";
+                            }
+
+                            $conn->close();
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+                
+				
+				
+                
+	
+	
+       
+            <div class="col-sm-6">
+                <h2 class="label">Cafeteria</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Location</th>
+                                <th>Sensor</th>
+                                <th>Value</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
+                            
+							error_reporting(0);
+                            session_start();
+
+                            $servername = "localhost";
+                            $username = "root";
+                            $password = "";
+                            $dbname = "temp";
+                            
+                            
+
+                            $conn = new mysqli($servername, $username, $password, $dbname);
+
+                            if ($conn->connect_error) {
+                                die("Connection failed: " . $conn->connect_error);
+                            }
+
+                            $sql = "SELECT * FROM temp WHERE Location = 'Cafeteria';";
+
+                            $result = $conn->query($sql);
+
+                            if ($result->num_rows > 0) {
+                                while($row = $result->fetch_assoc()) {
+                                    print   "<tr>";
+                                    print   "<td>" . $row["ID"] . "</td>" . "<td>" . $row["Location"] . "</td>" . 
+                                            "<td>" . $row["Sensor"] . "</td>" . "<td>" . $row["Value"] . "</td>";
+                                    print    "</tr>";
+                                }
+                            }
+                            else {
+                                print   "<td> 0 Results </td><br>";
+                            }
+
+                            $conn->close();
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+				<div class="row">
+        
+            <div class="col-sm-6">
+                <h2 class="label" >Lobby</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Location</th>
+                                <th>Sensor</th>
+                                <th>Value</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
+                            
+                            session_start();
+
+                            $servername = "localhost";
+                            $username = "root";
+                            $password = "";
+                            $dbname = "temp";
+                            
+                            
+
+                            $conn = new mysqli($servername, $username, $password, $dbname);
+
+                            if ($conn->connect_error) {
+                                die("Connection failed: " . $conn->connect_error);
+                            }
+
+                            $sql = "SELECT * FROM temp WHERE Location = 'Lobby';";
+
+                            $result = $conn->query($sql);
+
+                            if ($result->num_rows > 0) {
+                                while($row = $result->fetch_assoc()) {
+                                    print   "<tr>";
+                                    print   "<td>" . $row["ID"] . "</td>" . "<td>" . $row["Location"] . "</td>" . 
+                                            "<td>" . $row["Sensor"] . "</td>" . "<td>" . $row["Value"] . "</td>";
+                                    print    "</tr>";
+                                }
+                            }
+                            else {
+                                print   "<td> 0 Results </td><br>";
+                            }
+
+                            $conn->close();
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+                
+				
+				
+                
+	
+	
+       
+            <div class="col-sm-6">
+                <h2 class="label">Kitchen</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Location</th>
+                                <th>Sensor</th>
+                                <th>Value</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
+                            
+							error_reporting(0);
+                            session_start();
+
+                            $servername = "localhost";
+                            $username = "root";
+                            $password = "";
+                            $dbname = "temp";
+                            
+                            
+
+                            $conn = new mysqli($servername, $username, $password, $dbname);
+
+                            if ($conn->connect_error) {
+                                die("Connection failed: " . $conn->connect_error);
+                            }
+
+                            $sql = "SELECT * FROM temp WHERE Location = 'Kitchen';";
+
+                            $result = $conn->query($sql);
+
+                            if ($result->num_rows > 0) {
+                                while($row = $result->fetch_assoc()) {
+                                    print   "<tr>";
+                                    print   "<td>" . $row["ID"] . "</td>" . "<td>" . $row["Location"] . "</td>" . 
+                                            "<td>" . $row["Sensor"] . "</td>" . "<td>" . $row["Value"] . "</td>";
+                                    print    "</tr>";
+                                }
+                            }
+                            else {
+                                print   "<td> 0 Results </td><br>";
+                            }
+
+                            $conn->close();
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
 
 	
 <!--===============================================================================================-->	
