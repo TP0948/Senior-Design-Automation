@@ -1,0 +1,4 @@
+Node red installs!
+Run as non-root
+Running as root breaks everything
+Config file now changes to my text. However, not properly.... 

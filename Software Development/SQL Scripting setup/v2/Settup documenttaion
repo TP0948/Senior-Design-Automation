@@ -1,0 +1,12 @@
+run SL1.SH
+
+Enter manually in CLI ** use default Pi user and pass info to run below if asked.
+
+sudo su 
+
+mysql -u root -p
+
+GRANT ALL ON *.* TO 'nodered' @'192.168.1.%' IDENTIFIED BY 'nodered' with grant option;
+
+Run SL2.SH script
+
