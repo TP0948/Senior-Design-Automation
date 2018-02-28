@@ -1,0 +1,129 @@
+system temp
+str = msg.payload 
+msg.payload  = str.substring(5, 9);
+
+var newMsg = { payload: msg.payload };
+newMsg.topic="insert into NRSystem (Building,Location,Sensor,value,Date) values (\"GCH\",\"Pi-Node_red\",\"CPU-TEMP\","+newMsg.payload+",now())";
+return newMsg;
+
+system load
+var newMsg = { payload: msg.payload };
+newMsg.topic="insert into NRSystem (Building,Location,Sensor,value,Date) values (\"GCH\",\"Pi-Node_red\",\"CPU-LOAD\","+newMsg.payload+",now())";
+return newMsg;
+
+
+
+Free Memory 
+var newMsg = { payload: msg.payload };
+newMsg.topic="insert into NRSystem (Building,Location,Sensor,value,Date) values (\"GCH\",\"Pi-Node_red\",\"Memory Usage\","+newMsg.payload+",now())";
+return newMsg;
+
+Disk usage
+var re = /([0-9]{2})%/
+var idx = msg.payload.search(re);
+var str = msg.payload;
+if (idx >=0) {
+ str = msg.payload.substring(idx, idx + 2);
+}
+msg.payload = str;
+
+var newMsg = { payload: msg.payload };
+newMsg.topic="insert into NRSystem (Building,Location,Sensor,value,Date) values (\"GCH\",\"Pi-Node_red\",\"Disk-Usage\","+newMsg.payload+",now())";
+return newMsg;
+
+
+Room1 Light
+var newMsg = { payload: msg.payload };
+newMsg.topic="insert into MQTTData (Building,Location,Sensor,value,Date) values (\"GCH\",\"Room1\",\"Light1\","+newMsg.payload+",now())";
+return newMsg;
+
+Room2 light
+var newMsg = { payload: msg.payload };
+newMsg.topic="insert into MQTTData (Building,Location,Sensor,value,Date) values (\"GCH\",\"Room2\",\"Light1\","+newMsg.payload+",now())";
+return newMsg;
+
+room3 light
+var newMsg = { payload: msg.payload };
+newMsg.topic="insert into MQTTData (Building,Location,Sensor,value,Date) values (\"GCH\",\"Room3\",\"Light1\","+newMsg.payload+",now())";
+return newMsg;
+
+room4 light
+var newMsg = { payload: msg.payload };
+newMsg.topic="insert into MQTTData (Building,Location,Sensor,value,Date) values (\"GCH\",\"Room4\",\"Light1\","+newMsg.payload+",now())";
+return newMsg;
+
+room5 light 
+var newMsg = { payload: msg.payload };
+newMsg.topic="insert into MQTTData (Building,Location,Sensor,value,Date) values (\"GCH\",\"Room5\",\"Light1\","+newMsg.payload+",now())";
+return newMsg;
+
+outside light
+var newMsg = { payload: msg.payload };
+newMsg.topic="insert into MQTTData (Building,Location,Sensor,value,Date) values (\"GCH\",\"Perim\",\"Light1\","+newMsg.payload+",now())";
+return newMsg;
+
+Room 4 temp
+var newMsg = { payload: msg.payload };
+newMsg.topic="insert into MQTTData (Building,Location,Sensor,value,Date) values (\"GCH\",\"Room4\",\"Temperature\","+newMsg.payload+",now())";
+return newMsg;
+
+room6 temp
+var newMsg = { payload: msg.payload };
+newMsg.topic="insert into MQTTData (Building,Location,Sensor,value,Date) values (\"GCH\",\"Room6\",\"Temperature\","+newMsg.payload+",now())";
+return newMsg;
+
+external watter
+var newMsg = { payload: msg.payload };
+newMsg.topic="insert into MQTTData (Building,Location,Sensor,value,Date) values (\"GCH\",\"exterior\",\"water\","+newMsg.payload+",now())";
+return newMsg;
+
+room3 air quality
+var newMsg = { payload: msg.payload };
+newMsg.topic="insert into MQTTData (Building,Location,Sensor,value,Date) values (\"GCH\",\"Room3\",\"Air Quality\","+newMsg.payload+",now())";
+return newMsg;
+
+
+
+door1 sensor 
+var newMsg = { payload: msg.payload };
+newMsg.topic="insert into MQTTData (Building,Location,Sensor,value,Date) values (\"GCH\",\"Unit1\",\"Door1\","+newMsg.payload+",now())";
+return newMsg;
+
+window1 sensor
+var newMsg = { payload: msg.payload };
+newMsg.topic="insert into MQTTData (Building,Location,Sensor,value,Date) values (\"GCH\",\"Unit4\",\"Window1\","+newMsg.payload+",now())";
+return newMsg;
+
+motion sensor1-3 (planned)
+
+var newMsg = { payload: msg.payload };
+newMsg.topic="insert into MQTTData (Building,Location,Sensor,value,Date) values (\"GCH\",\"Room1\",\"Lamp1\","+newMsg.payload+",now())";
+return newMsg;
+var newMsg = { payload: msg.payload };
+newMsg.topic="insert into MQTTData (Building,Location,Sensor,value,Date) values (\"GCH\",\"Room1\",\"Lamp1\","+newMsg.payload+",now())";
+return newMsg;
+var newMsg = { payload: msg.payload };
+newMsg.topic="insert into MQTTData (Building,Location,Sensor,value,Date) values (\"GCH\",\"Room1\",\"Lamp1\","+newMsg.payload+",now())";
+return newMsg;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

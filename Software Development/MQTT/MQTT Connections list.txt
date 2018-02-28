@@ -1,0 +1,72 @@
+cpu temp 
+topic/cpuTemp
+
+PID Controller config 
+set point 53
+K proportional 85
+K integral 1
+K differential 5
+
+
+fan controller PID script
+
+var PID = msg.payload; // PID Value
+var cycle; // PWM duty cycle
+var adjustment = 0; // duty cycle adjustment
+
+var cycle = parseFloat(adjustment) + parseFloat(PID);
+
+if(cycle<0){
+    msg.payload=0;
+    return msg;
+}
+
+else if(cycle>100){
+    msg.payload=1;
+    return msg;
+}
+
+else
+{
+    msg.payload = parseFloat(cycle); 
+   // 0 - 100
+    return msg;
+}
+
+return null;
+
+
+input / output > topic/pidController
+
+MQTT master output console
+#
+
+MQTT Light topics 
+***Unsure if using Boolean or number at this point***
+room1/light1
+room2/light1
+room3/light1
+room4/light1
+room5/light1
+ext/light1
+
+
+MQTT Light topics
+room4/temperature
+room6/temperature
+
+MQTT Watter topic
+ext/water
+
+
+MQTT Air quality topic 
+room3/AQ
+
+
+MQTT motion and security sensor topics
+
+unit1/door1
+unit4/door1
+unit5/motion1
+unit5/motion2
+unit5/motion3
