@@ -1,5 +1,32 @@
 <?php include 'HTMLDatabaseFunctions.php';
 
+$userDir = new UserDir($pathToUserDir);
+$userDir->createImageDirectory();
+
+class UserDir extends SplFileInfo
+{
+    public function createThumbDirectory()
+    {
+        return $this->createSubdirectory('thumb');
+    }
+    public function createImageDirectory()
+    {
+        return $this->createSubdirectory('image');
+    }
+    private function createSubdirectory($email)
+    {
+        $path = $this->getPathname();
+        $dir = $path . PATH_SEPARATOR . $email;
+		
+        return mkdir($dir);
+    }
+}
+
+
+
+
+
+
 
 
    function NewUser()
@@ -18,13 +45,19 @@
             VALUES ('$FName','$LName', '$email', '$password')";
 
     if ($conn->query($sql) === TRUE) {
+
+
+
     
     echo '<script language="javascript">'; #run script to confirm reservation has been made
     echo 'alert("Your account has been created sucessfully");';
     echo 'window.location.href = "../index/index.php";'; #redirect to search page
     echo '</script>';
+
     
     header("location: index.html");
+	
+	
     
     
 } else {
@@ -39,31 +72,11 @@
 
 }
 
-/*__________________________________Ignore this code_________________________*/
-/*if (!$check1_res) {
-printf("Error: %s\n", mysqli_error($conn));
-exit();
-}
-    
-    $row=mysqli_fetch_array($qry);
-    while($row){
-    
-    
-    if(($row['username'] == '') && ($cPassword == $password)){
-        
-            $iSql = "INSERT INTO users (username, password, email)
-            VALUES ($username,$password,$email)";
-            
-            $ins = mysqli_query($conn, $iSql); 
-            
-            
-}
-}
-}*/
 
 
 
-    function SignUp()
+
+  /*  function SignUp()
 {
     if(!empty($_POST['username']))   //checking the 'user' name which is from Sign-Up.html, is it empty or have some text
 {
@@ -80,9 +93,25 @@ exit();
 		echo "SORRY...This email already has a user account associated with it...";
 	}
 }
-}
+} */
 
-	NewUser();
+
+
+
+
+
+NewUser();
+createSubdirectory();
+createImageDirectory();
+
+
+
+
+
+
+
+
+	
 
 
 

@@ -1,16 +1,5 @@
 <!DOCTYPE html>
 
-<?php include "HTMLDatabaseFunctions";
-
-session_start();
-
-
- $_SESSION['email'] = $user ;
-
-
-?>
-
-
 
 
 <html lang="en">
@@ -62,7 +51,7 @@ session_start();
 	
 }
 
-.well{
+.well.well1.well2.well3.well4.well5.well6.well7.well8.well9.well10.wellHeader{
 	flex: 1 1 auto;
 }
 
@@ -100,24 +89,9 @@ p {
 	  
 
   </style>
-
-
- 
-  
-<script src="http://localhost/HousingWeb-Updated/images/JQuery.js">
-
-</script>
- 
-
-  
-  
 </head>
 <body>
-
-
-
-
-     <!-- ______________________________________Navigation__________________________________ -->
+<!-- ______________________________________Navigation__________________________________ -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="index.html">Housing automation</a>
@@ -141,120 +115,82 @@ p {
 	
 	
 
-
-	
-	
-
-	
-	
-	
-	
-	
-	
 <div class="MainContent">
     <div class="col-sm-12">
-      <div class="well">
+      <div class="wellHeader">
         <h1 style="text-align:center;   margin:0 auto;">My Properties</h1>
-		<button onclick="appendText()">Append text</button>
+		<button onclick="location.href = 'http://localhost/HousingWeb-Updated/NewProperty.php';" id="NewProperty">Add new property</button>
       </div>
-     
-     
-
-
-
-
-
-<!--________________________________________________________PROPERTIES___________________________________-->
-<!--________________________________________________________PROPERTIES___________________________________-->
-<!--________________________________________________________PROPERTIES___________________________________-->
-<div class="row">
-
-
-
-
-
-
-
-
-
-        <div class="col-sm-4">
-          
-		  
-		  
-		  
-		  
-		   <div class = "newProperty">
-		  
-		  
-		  
-		  
-		  
-		  </div>
-		  
-		  <div class="well">
-		  
-		  
-		  
-		 
-		  
-		  
-		  
-		   
-		  
-            <img class="pIMG" src="http://localhost/HousingWeb-Updated/images/GraceCenter.jpg"> 
-            <p>Grace Center Low Income Housing</p> 
-			 <div class="btn-group">
-				<button onclick="location.href = 'http://localhost/HousingWeb-Updated/Manage.php';" id="Manage"  >Manage</button>
-				<button onclick="location.href = 'http://localhost/HousingWeb-Updated/Analytics.php';" id="Manage"  >Analytics</button>
-				<button onclick="location.href = 'http://localhost/HousingWeb-Updated/Settings.php';" id="Manage"  >Settings</button>
-			</div> 
-          
-        </div>
-		</div>
-        <div class="col-sm-4">
-           <div class="well">
-            <img class="pIMG" src="http://localhost/HousingWeb-Updated/images/Oakland.jpg"> 
-            <p>Oakland University</p> 
-			 <div class="btn-group">
-				<button onclick="location.href = 'http://localhost/HousingWeb-Updated/Manage.php';" id="Manage"  >Manage</button>
-				<button onclick="location.href = 'http://localhost/HousingWeb-Updated/Analytics.php';" id="Manage"  >Analytics</button>
-				<button onclick="location.href = 'http://localhost/HousingWeb-Updated/Settings.php';" id="Manage"  >Settings</button>
-			</div> 
-          </div>
-        </div>
-        <div class="col-sm-4">
-           <div class="well">
-           <img class="pIMG" src="http://localhost/HousingWeb-Updated/images/Mcdonalds.jpg"> 
-           <p>Mcdonalds</p> 
-			 <div class="btn-group">
-				<button onclick="location.href = 'http://localhost/HousingWeb-Updated/Manage.php';" id="Manage"  >Manage</button>
-				<button onclick="location.href = 'http://localhost/HousingWeb-Updated/Analytics.php';" id="Manage"  >Analytics</button>
-				<button onclick="location.href = 'http://localhost/HousingWeb-Updated/Settings.php';" id="Manage"  >Settings</button>
-			</div>  
-          </div>
-        </div>
-		</div>
 	  <div class="row">
-        <div class="col-sm-4">
-          <div class="well">
-		  
-		  
-		  
-		  
-		    <a href="http://localhost/HousingWeb-Updated/NewProperty.php">
-            <img class="pIMG" src="http://localhost/HousingWeb-Updated/images/Plus.png" id="addProperty" height="391px" Width="335.183px"> 
-            </a>
-          </div>
-		  
-
-        </div>
+		<div class="col-sm-4">
+			<div class="well0">
+	
+			</div>
+			</div>
+		<div class="col-sm-4">
+			<div class="well1">
+	
+			</div>
+			</div>
 		
+	
+		<div class="col-sm-4">
+			<div class="well2">
+	
+			</div>
+			</div>
 		
 		</div>
 		
-  </div>
-</div>
-</div>
+		<div class="row">
+		<div class="col-sm-4">
+			<div class="well4">
+	
+			</div>
+			</div>
+		<div class="col-sm-4">
+			<div class="well5">
+	
+			</div>
+			</div>
+	
+		<div class="col-sm-4">
+			<div class="well6">
+	
+			</div>
+			</div>
+		
+		</div>
+		
+		<div class="row">
+		<div class="col-sm-4">
+			<div class="well7">
+	
+			</div>
+			</div>
+		<div class="col-sm-4">
+			<div class="well8">
+	
+			</div>
+			</div>
+	
+		<div class="col-sm-4">
+			<div class="well9">
+	
+			</div>
+			</div>
+			</div>
+		<div class="row">
+		<div class="col-sm-4">
+			<div class="well10">
+	
+			</div>
+			</div>
+			</div>
+			</div>
+
+	
+
 
 
 
@@ -268,5 +204,42 @@ p {
 	<script src="vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
+	
+	
+	<script>
+	
+	
+	
+		$( document ).ready(function() {
+			console.log( "ready!" );
+		});
+		
+		
+		$.ajax({
+			
+			
+			url: `http://localhost/HousingWeb-Updated/find.php`,
+			
+			
+			type: 'GET',
+			
+			
+			
+			success: function(result) {
+				
+				var a = 0;
+				
+				$( ".well").empty();
+				$( ".well" + a).append(result);
+			
+				a++;
+				
+			}
+			
+			
+		});
+	
+	</script>	
+	
 </body>
 </html>

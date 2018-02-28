@@ -1,5 +1,7 @@
 <?php
    session_start();
+   
+   error_reporting(0);
     
     $servername = "localhost";
     $username = "root";
@@ -11,6 +13,9 @@
     $_SESSION['USER'] = $username;
     $_SESSION['PASS'] = $password;
     $_SESSION['DB'] = $database;
+	
+	
+	
     
     $conn = new mysqli($servername, $username, $password, $database, $dbport);
     

@@ -85,6 +85,24 @@ function add_Property ($PropertyName, $Address, $City, $State, $Country) {
     </style>
 
 
+	<script type="text/javascript">
+					 function readURL(input) {
+						if (input.files && input.files[0]) {
+							var reader = new FileReader();
+
+						reader.onload = function (e) {
+							$('#blah')
+								.attr('src', e.target.result)
+								.width(150)
+								.height(200);
+						};
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+					</script>
+						
+	
 	
 	
 	
@@ -126,6 +144,12 @@ function add_Property ($PropertyName, $Address, $City, $State, $Country) {
             
             <form id="addStudent" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" onsubmit="validateStudent()">`
                 <h2>Property information</h2>
+				
+				<div class="form-group">
+						<label for="Image">Upload image</label>
+						<input style="display: inline-block; padding-top:20px;" type='file' onchange="readURL(this);" />
+						<img   style="display: inline-block;" id="blah" src="#" alt="File name" />
+				</div>
                 
                 <div class="form-group">
                     <label for="FName">Property name</label>
