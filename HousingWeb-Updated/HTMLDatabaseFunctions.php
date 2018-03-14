@@ -48,7 +48,7 @@ while($result = mysqli_fetch_array($qry,MYSQLI_ASSOC)){
             $retvalue = True;
            
         }
-        }
+	}
         return $retvalue;
     }
 	

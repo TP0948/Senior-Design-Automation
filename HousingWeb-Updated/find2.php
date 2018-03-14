@@ -1,8 +1,6 @@
    <?php include "HTMLDatabaseFunctions.php";
                             
 							
-                            
-
                             $servername = "localhost";
                             $username = "root";
                             $password = "";
@@ -46,4 +44,6 @@
                                 print   "<td> You have no registered properties! </td><br>";
                             }
                             $conn->close();
+							
+							
 ?>

@@ -78,6 +78,8 @@ p {
     background-color: #3e8e41;
 }
 
+
+
  .pIMG {
     max-width:100%;
     max-height:100%;
@@ -94,7 +96,7 @@ p {
 <!-- ______________________________________Navigation__________________________________ -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Housing automation</a>
+        <a class="navbar-brand" href="Home4.php">Housing automation</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -119,7 +121,8 @@ p {
     <div class="col-sm-12">
       <div class="wellHeader">
         <h1 style="text-align:center;   margin:0 auto;">My Properties</h1>
-		<button onclick="location.href = 'http://localhost/HousingWeb-Updated/NewProperty.php';" id="NewProperty">Add new property</button>
+		<button onclick="location.href = 'http://localhost/HousingWeb-Updated/NewProperty2.php';" id="NewProperty">Manage/Add Property</button>
+		
       </div>
 	  <div class="row">
 		<div class="col-sm-4">
@@ -188,7 +191,7 @@ p {
 			</div>
 			</div>
 			</div>
-
+</div>
 	
 
 
