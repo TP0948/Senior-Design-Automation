@@ -26,6 +26,6 @@ if( isset($_GET['del'])) {
 
 	/*run_update($sql_i);*/
 	echo "Your property has been deleted!";
-
+	header("Location: NewProperty2.php");
 
 ?>

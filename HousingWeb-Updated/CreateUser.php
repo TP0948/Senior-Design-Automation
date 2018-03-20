@@ -1,4 +1,4 @@
-<?php include 'HTMLDatabaseFunctions.php';
+<?php include "HTMLDatabaseFunctions.php";
 
 $userDir = new UserDir($pathToUserDir);
 $userDir->createImageDirectory();
